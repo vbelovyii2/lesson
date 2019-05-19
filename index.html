@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+      <div class="container">
+        <input type="text" @keyup.enter="alertValue" v-model.lazy="inputValue">
+        <h1>{{ inputValue }}</h1>
+        <h2>{{ message }}</h2>
+        <a :href="ninja">Google</a>
+         <h1 v-on:mousemove="myMouseMove">Сообщение: {{ counter }} / Координата по х = {{ x }}</h1>
+         <button @click="counterUp(1)">увеличить</button>
+         <div 
+             class="circle"
+             @click="isActive = !isActive"
+             :class="changeColor"
+         ></div>
+         <div class="circle"
+              :class="myColor"
+         ></div>
+         <input type="text" v-model="myColor">
+         <div class="circle"
+              :style="changeMyColor"
+         ></div>
+         <input type="text" v-model="myStyleColor">
+         <input type="text" v-model="myStyleHeight">
+      </div>
+  </div>
+ <div class="myclass"></div>
+ <div class="circle1"></div>   
+ 
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
+
+
