@@ -48,3 +48,6 @@ var app = new Vue({
 
 });
 
+let arr = ['anna','irina','kris'];
+
+console.log(arr[0]);
